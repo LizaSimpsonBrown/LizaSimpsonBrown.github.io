@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="coding journal" content="">
+        <meta name="Liza Simpson Brown" content="">  
+        <title>My new bootstrap file</title> 
+        
+            <!-- Bootstrap --> 
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+            <!-- flipper project 2 -->
+        <link href="/flipper/style.css" rel="stylesheet" type="text/css">
+        <a href="flipper/index.html"></a>
+
+    </head>
+    <body>
+        <style>
+                    body {
+                      padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+                      background-color: aquamarine;  
+                    }
+
+                    h5 {
+                        text-align: center;
+                        color:#85b1e0;
+                    }
+                    
+                    /*--Start Bootstrap   3-Col-Portfolio.css*/
+                    .portfolio-item {
+                      margin-bottom: 25px;
+                  }
+                  
+                  footer {
+                      margin: 50px 0;
+                  }
+
+                  .page-header{
+                      text-align: center;
+                      color: blue;
+                  }
+        </style>
+
+             <!-- Page Heading -->
+        <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Postcards & Places
+                        <small>coding quandaries for newbies</small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+
+      <!-- gallery 'boxes' -->      
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 portfolio-item">
+            <div class="card h-100"><a href="#"><img class="card-img-top" src="images/seahorse.jpg" class="img-responsive" alt="">
+                <div class="card-body"><h4 class="#"><a href="#">Project One - 'Image Changer'</a></h4><h4 class="card-title">See fish</h4><p class="card-text">Random fishiness in Barcelona, obviously some connection to Gaudi ceramics, but far more importantly, my masterly implimentation of Mozilla's 'image changer' code (go on, click it! for the mother of god, all afternoon i spent on it...) on May 13th, 2018</p><a href="#" class="btn btn-primary">Go somewhere</a>
+                
+<script>
+    //image changer - project 1
+var myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+var mySrc = myImage.getAttribute('src');
+if(mySrc === 'images/seahorse.jpg') {
+myImage.setAttribute ('src','images/fish.jpg');
+} else {
+myImage.setAttribute ('src','images/seahorse.jpg');
+}
+}
+</script>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-sm-6 col-md-4 portfolio-item">
+            <!-- flipper layout -  ontouchstart allows the panes to swap on touch screens. -->
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    <div class="front" 
+                    card h-100></div><a href="#"><a href="#"><img class="card-img-top" src="images/brexit cartoon.jpg" class="img-responsive" alt=""></a>
+                        <div class="card h-100">
+                            <div class="card-body"><h4 class="#"><a href="#">Project Two - 'Card Flipper'</a></h4><h4 class="card-title">the face of it</h4><p class="card-text">Flippin' unbelieeeevable! I bet you'd love to see the code! Am I right? nice innit?.....well, magic mirror writing is extra, but where's the back gone... I'll have to come back later and fix it able! I bet you'd love to see the code! Am I right? nice innit?.....well, magic mirror writing is extra, but where's the back gone... I'll have to come back later and fix it</p><a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    <div class="back"><a href="#"><img class="card-img-top" src="images/brexit cartoon.jpg" class="img-responsive" alt=""></a>
+                        <div class="card h-100">
+                            <div class="card-body"><h4 class="flippin' marvellous"><a href="#"></a></h4><h4 class="card-title">the flip side!</h4><p class="card-text">the code is from the @DavidWalshblog This was really difficult to combine with the 3 column bootstrap format i had hand crafted with w3 help The column sat underneath the first box for flippin ages and the backside image showed the front image behind it for long enough and to make the writing fit in the box which sucks.</p><a href="#" class="btn btn-primary">Go somewhere</a></div> 
+                                   
+                 <!-- flip with a click? - doesn't do anything -->
+                    <script> document.querySelector("#myCard").classList.toggle;
+                    var heightFront, heightBack;
+  
+                    heightFront = $('.front').height();
+                    heightBack = $('.back').height();
+  
+                        if(heightFront > heightBack){
+                        $('.flip-container').height(heightFront);
+                        } else {
+                        $('.flip-container').height(heightBack);
+                        }
+                    </script>
+                            </div>                 
+                        </div>          
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-sm-6 col-md-4 portfolio-item">   
+            <div class="card h-100"><a href="#"><img class="card-img-top" src="images/kung-fu-granny_1.jpg" class="img-responsive" alt="">
+                   
+                <div class="card-body"><h4 class="#"><a href="#">Project 3 - Personal Welcome Message</a></h4><h4 class="card-title"></h4>
+                <p class="card-text">make sure you've got the right number pof divs!! All afternoon trying to get my ducks in a row and not sat underneath each other..one div too many is all it. The idea is to put the code where you press the button</p>
+
+                    <!--     <a href="#" class="button">change user</button></a>   -->
+                    <button>Change user</button>
+                    <!--personalized welcome message - project 3
+//takes references to the new button and the heading, storing them inside variables-->
+<script>var myButton = document.querySelector('button');
+var myHeading = document.querySelector('h1');
+
+function setUserName() {
+var myName = prompt('Please enter your name.');
+localStorage.setItem('name', myName);
+myHeading.textContent = 'Welcome to my coding journeys, ' + myName;
+}
+
+if(!localStorage.getItem('name')) {
+setUserName();
+} else {
+var storedName = localStorage.getItem('name');
+myHeading.textContent = 'Welcome to my coding conundrums, ' + storedName + '!';
+}
+
+myButton.onclick = function() {
+setUserName();
+}
+</script>
+                    
+                
+                </div>
+            </div>
+        </div>       
+
+        <div class="clearfix visible-sm-block"></div>
+        <div class="clearfix visible-md-block"></div>
+
+        <div class="col-sm-6 col-md-4 portfolio-item">
+            <div class="card h-100"><a href="#">
+            <img class="card-img-top" src="images/sauna.jpg" class="img-responsive" alt="">
+            <div class="card-body"><h4 class="#"><a href="#">Project 4 - Mozilla Calendar</a></h4><h4 class="card-title"></h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero recusandae eligendi debitis sunt possimus soluta voluptatem a pariatur veniam necessitatibus, quasi numquam voluptate quam fugit atque quae officiis fuga quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero recusandae eligendi debitis sunt possimus soluta voluptatem a pariatur veniam necessitatibus, quasi numquam voluptate quam fugit atque quae officiis fuga quos.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a></div>
+
+        <div class="clearfix visible-sm-block"></div>
+        <div class="clearfix visible-lg-block"></div>
+          
+       
+        <div class="col-sm-6 col-md-4 portfolio-item"><p><img src=".jpg" class="img-responsive">Box 5</p></div>
+
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 6</p></div>
+                
+        <div class="clearfix visible-sm-block"></div>
+        <div class="clearfix visible-md-block"></div>
+
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 7</p></div>
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 8</p></div>
+        
+        <div class="clearfix visible-sm-block"></div>
+        <div class="clearfix visible-lg-block"></div>
+        
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 9</p></div>
+        
+        
+        <div class="clearfix visible-md-block"></div>
+
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 10</p></div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 11</p></div>
+        <div class="col-sm-6 col-md-4 portfolio-item"><p>Box 12</p></div>
+        </div>
+    </div>
+</div>
+
+   <!-- Footer -->
+   <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Liza Simpson Brown 2018</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+   <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script>document.querySelector("#myCard").classList.toggle;
+    </script>
+    
+    </body>
+</html>  
